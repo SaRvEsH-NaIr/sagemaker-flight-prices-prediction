@@ -258,7 +258,7 @@ preprocessor = Pipeline(steps=[
 ])
 
 # read the training data
-train = pd.read_csv("C:\\Users\\Dell\\Desktop\\Machine Learning\\FLight Price Predictions (AWS Sagemaker)\\Data\\train.csv")
+train = pd.read_csv("train.csv")
 train['date_of_journey'] = pd.to_datetime(train['date_of_journey'], dayfirst=True, errors='coerce')
 X_train = train.drop(columns="price")
 y_train = train.price.copy()
